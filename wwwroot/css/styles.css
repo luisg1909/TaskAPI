@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+#title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#title h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#header-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#form-section {
+    padding: 20px;
+    width: 30%;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+#task-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 70%;
+    overflow-y: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.add-task {
+    background: #28a745;
+}
+
+button.edit-task {
+    background: blue;
+}
+
+button.delete-task {
+    background: red;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.sort-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sort-controls select {
+    margin-right: 10px;
+}
+
+.sort-notification {
+    background: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 767px) {
+    #content {
+        flex-direction: column;
+    }
+
+    #form-section, #task-section {
+        width: 100%;
+    }
+}

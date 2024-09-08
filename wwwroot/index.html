@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="title">
+            <h1>App Demo Task</h1>
+        </div>
+        <div id="header">
+            <img src="d.png" alt="Notebook" id="header-image">
+            <h2>Task Manager</h2>
+        </div>
+        <div id="content">
+            <div id="form-section">
+                <h2>Add New Task</h2>
+                <form id="task-form">
+                    <input type="text" id="task-title" placeholder="Title" required>
+                    <textarea id="description" placeholder="Description"></textarea>
+                    <input type="number" id="priority" placeholder="Priority" required>
+                    <input type="date" id="dueDate">
+                    <select id="status" required>
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                    <button type="submit" class="add-task">Add Task</button>
+                </form>
+            </div>
+            <div id="task-section">
+                <div class="sort-controls">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="priority-asc">Priority Ascending</option>
+                        <option value="priority-desc">Priority Descending</option>
+                        <option value="status-asc">Status Ascending</option>
+                        <option value="status-desc">Status Descending</option>
+                    </select>
+                    <button id="sort-ok-button">OK</button>
+                </div>
+                <div id="sort-notification" class="sort-notification"></div>
+                <table id="tasks">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Priority</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
